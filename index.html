@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewsWave Now: Trusted News website</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="https://fontawesome.com/icons/greater-than?f=classic&s=solid&pc=%235e8bd9">  -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Nav bar -->
+        <nav class="bg-deepBlue">
+            <div class="relative w-[1200px] mx-auto flex items-center justify-between">
+                <a href="#" onclick="reload()" class="cursor-pointer py-2 pr-7 ">
+                    <img src="Images/logo.jpg" width="125px" height="20px" alt="">
+                </a>
+                <ul class="flex">
+                    <li class=" text-white mx-4 py-7 font-mullish hover:text-lightBlue 
+                cursor-pointer transition-all duration-200 relative group ">
+                        <a href="#" class="tracking-wider nav-item" id="world" onclick="onNavItemClick('world')">World </a>
+                        <div class="absolute bottom-0 w-full h-1 bg-lightBlue hidden group-hover:block "></div>
+                    </li>
+                    <li class=" text-white mx-4 py-7 font-mullish hover:text-lightBlue 
+                cursor-pointer transition-all duration-200 relative group">
+                        <a href="#" class="nav-item tracking-wider" id="Entertainment" onclick="onNavItemClick('Entertainment')">Entertainment </a>
+                        <div class="absolute bottom-0 w-full h-1 bg-lightBlue hidden group-hover:block "></div>
+                    </li>
+                    <li class=" text-white mx-4 py-7 font-mullish hover:text-lightBlue 
+                cursor-pointer transition-all duration-200 relative group">
+                        <a href="#" class="tracking-wider nav-item" id="Politics" onclick="onNavItemClick('Politics')">Politics </a>
+                        <div class="absolute bottom-0 w-full h-1 bg-lightBlue hidden group-hover:block "></div>
+                    </li>
+                    <li class=" text-white mx-4 py-7 font-mullish hover:text-lightBlue 
+                cursor-pointer transition-all duration-200 relative group nav-item">
+                        <a href="#" class="tracking-wider nav-item" id="Sports" onclick="onNavItemClick('Sports')">Sports </a>
+                        <div class="absolute bottom-0 w-full h-1 bg-lightBlue hidden group-hover:block "></div>
+                    </li>
+                    <li class="text-white mx-4 py-7 font-mullish hover:text-lightBlue 
+                cursor-pointer transition-all duration-200 relative group">
+                        <a href="#" class="tracking-wider nav-item" id="Business" onclick="onNavItemClick('Business')">Business </a>
+                        <div class="absolute bottom-0 w-full h-1 bg-lightBlue hidden group-hover:block "></div>
+                    </li>
+                </ul>
+                <div class="search flex gap-7">
+                    <input id="input-text" type="text" placeholder="ex. Sports"
+                        class="p-2 px-4 rounded-md w-[200px] focus:ring focus:ring-white">
+                    <button
+                        class=" text-lightBlue300 font-mullish rounded-sm bg-white mx-4 w-[115px]
+               border-2 px-[15px] py-3 font-bold text-sm transition-all duration-200 hover:text-lightBlue500 flex items-center" id="search-button">
+                        Search
+                        <svg viewBox="0 0 24 24" focusable="false" class="w-[14px] h-[14px] ml-3">
+                            <path fill="currentColor" d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <!-- Hero section  -->
+        <section class="bg-deepBlue ">
+            <div class="w-10/12 max-w-[1080px] h-screen flex flex-row mx-auto justify-between items-center h-[650px] " id="main-section">
+                <!-- Left -->
+                <div class="left object-cover" >
+                    <img src="https://via.placeholder.com/400x200" alt="news-image " id="hero-left-img" height="500" width="300" alt="">
+                </div>
+                <!-- right -->
+                <div class="details flex flex-col gap-y-5  w-2/6">
+                    <h2 class="text-white font-mullish font-bold text-[40px] leading-[1.2]" id="hero-news-title">
+                         </h2>
+                    <h5 class="text-white font-mullish font-semibold text-[25px] leading-[1.2]" id="hero-news-source"> </h5>
+                    <div class="text-white font-mullish  text-[15px] leading-[1.2]  " id="hero-news-desc"></div>
+                    <button id="search-btn"
+                        class="text-white font-mullish border-lightBlue border px-2 m-2 py-3 font-bold w-[130px] flex items-center hover:bg-slate-400 hover:text-deepBlueHead    focus:bg-slate-400 focus:text-deepBlueHead rounded-md transition-all duration-200 ">Read
+                        more
+                        <svg viewBox="0 0 24 24" focusable="false" class="w-[14px] h-[14px] ml-3">
+                            <path fill="currentColor" d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z">
+                            </path>
+                        </svg>
+                    </button>
+
+                </div>
+            </div>
+        
+        </section>
+        
+        <main>
+            <div class="card-container" id="card-container">
+            </div>
+            <template id="template-news-card">
+                <div class="card">
+                    <div class="card-header">
+                        <img src="https://via.placeholder.com/400x200" alt="news-image" id="news-img" alt="">
+                    </div>
+                    <div class="card-content">
+                        <h3 id="news-title">This is the title</h3>
+                        <h6 id="news-source">End gadget 26/04/2023</h6>
+                        <p class="news-desc" id="news-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                            Qui aliquam vel mollitia fugiat facere ad tenetur! Eveniet, excepturi ut? Officiis tempora
+                            nihil asperiores ullam molestiae doloremque cum nisi voluptate maiores.</p>
+                    </div>
+                </div>
+            </template>
+        </main>
+    </div>
+</body>
+<script src="index.js"></script>
+
+</html>
